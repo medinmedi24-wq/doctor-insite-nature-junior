@@ -67,11 +67,11 @@ button:disabled { opacity:.35; cursor:default; }
 .clinic-link svg { width:17px; height:17px; }
 .menu-toggle { display:none; }
 
-/* Keep the original portrait at its natural ratio, with generous space for the copy. */
+/* Copy and portrait share the header's centered container, even on ultrawide screens. */
 .hero { position:relative; isolation:isolate; height:min(740px,calc(100svh - 170px)); min-height:610px; overflow:hidden; background:#d5dcde; }
 .hero-art { position:absolute; inset:0; z-index:-1; }
-.hero-portrait { position:absolute; right:6%; bottom:-38%; height:138%; width:auto; max-width:none; object-fit:contain; mask-image:linear-gradient(to right,transparent,#000 14%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 8%); mask-composite:intersect; }
-.hero-inner { width:93%; height:100%; position:relative; display:flex; align-items:center; }
+.hero-portrait { position:absolute; right:-5%; bottom:-38%; height:138%; width:auto; max-width:none; object-fit:contain; mask-image:linear-gradient(to right,transparent,#000 14%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 8%); mask-composite:intersect; }
+.hero-inner { height:100%; position:relative; display:flex; align-items:center; }
 .hero-copy { width:53%; padding-bottom:18px; }
 .hero-copy .eyebrow { margin-bottom:32px; font-size:10px; color:#4c655b; }
 .tiny-line { width:24px; height:1px; background:currentColor; }
@@ -444,6 +444,7 @@ button:disabled { opacity:.35; cursor:default; }
   .menu-toggle { width:32px; height:32px; }
   .menu-toggle svg { width:17px; height:17px; }
   .hero { height:calc(100svh - 112px); min-height:620px; max-height:700px; background:#d5dcde; }
+  .hero-art.wrap { width:100%; }
   .hero-inner { width:calc(100% - 40px); align-items:flex-start; }
   .hero-copy { width:100%; padding-top:30px; padding-bottom:0; }
   .hero-copy .eyebrow { margin-bottom:17px; font-size:8px; }
